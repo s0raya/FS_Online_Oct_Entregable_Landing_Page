@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(fonts/futura_n4.df36ce3d9db534a4d7947f4aa825495ed740e410.ttf);
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 50px;
+}
+
+.icon-menu {
+    font-size: 30px;
+    color: rgba(0, 157, 149, 1);
+    float: left;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.item {
+    color: rgba(0, 157, 149, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Futura", sans-serif;
+    font-style: normal;
+    margin: 20px;
+    line-height: 20px;
+}
+
+
+.item::after {
+    content: "\142F";
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.icons {
+    display: flex;
+    color: rgba(0, 157, 149, 1);
+    justify-content: space-between;
+    width:10%;
+
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 45px;
+    height: 100px;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+.imagen {
+    width: 100%;
+}
+
+.gradiente {
+    position: relative;
+    width: 100%;
+}
+
+.gradiente::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,rgba(4,4,4,.65),rgba(54,54,54,.2));
+}
+
+.texto_imagen {
+    position: absolute;
+    color: white;
+    width: 100%;
+    bottom: 10px;
+    left: 10px;
+    letter-spacing: .2em;
+    line-height: 5;
+    font-family: "Futura", sans-serif;
+
+}
+
+.texto_imagen1 {
+    font-size: 15px;
+    width: 100%;
+}
+
+.texto_imagen2 {
+    font-size: 20px;
+    bottom: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width:480px) {
+    .icon-menu {
+        display: block;
+        color: red;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+    }
+    .logo {
+        width: 33%;
+    }
+    .menu {
+        width: 33%;
+        justify-content: center;
+    }
+    .icons {
+        justify-content: space-between;   
+    }
+
+    div svg {
+        margin: 10px;
+    }
+    .icon-menu {
+        display: block;
+    }
+    .navegacion {
+        display: none;
+    }
+
+    .texto_imagen1, .texto_imagen2 {
+        font-size: 0.9vw;
+    }
+
+    #check:checked ~ .navegacion {
+        display: block;
+        background-color: aquamarine;
+        z-index: 99;     
+    }
+}
+
